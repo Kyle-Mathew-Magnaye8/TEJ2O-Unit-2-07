@@ -5,13 +5,25 @@
  * This program does a cookie clicker game
 */
 
+// variable
+
 // setup
-let cookies: number = 0
+let cookieCount: number = 0
+
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 // adding cookie points
 input.onButtonPressed(Button.A, function () {
-  basic.showIcon(IconNames.Yes)
-  pins.digitalWritePin(DigitalPin.P16, 1)
+  cookieCount = cookieCount + 1
+  basic.pause(100)
+  basic.showNumber(cookieCount)
+})
+
+// Clears score back to 0
+input.onButtonPressed(Button.B, function () {
+  cookieCount = 0
+  basic.showIcon(IconNames.Happy)
+  basic.pause(500)
+  basic.showNumber(cookieCount)
 })
