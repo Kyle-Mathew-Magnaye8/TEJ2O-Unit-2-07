@@ -2,14 +2,13 @@
  *
  * Created by: Kyle Matthew
  * Created on: Feb 2026
- * This program does a cookie clicker game
+ * This program does a cookie clicker game.
 */
 
 // variable
-
-// setup
 let cookieCount: number = 0
 
+// setup
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
@@ -20,7 +19,7 @@ input.onButtonPressed(Button.A, function () {
   basic.showNumber(cookieCount)
 })
 
-// Clears score back to 0
+// clears score back to 0
 input.onButtonPressed(Button.B, function () {
   cookieCount = 0
   basic.showIcon(IconNames.Happy)
